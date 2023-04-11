@@ -32,6 +32,10 @@ RUN apk add --no-cache python3  py3-pip\
 COPY --from=builder /opt/httpbin /opt/
 COPY --from=builder /usr/lib/python3.10/site-packages/ /usr/lib/python3.10/site-packages/
 
+# Don't run as root
+ENV HOME /home/httpbin
+RUN adduser -D httpbin
+USER httpbin
 
 EXPOSE 8080
 
