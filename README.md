@@ -7,8 +7,8 @@ A [Kenneth Reitz](http://kennethreitz.org/bitcoin) Project.
 
 Run locally:
 ```sh
-docker pull kennethreitz/httpbin
-docker run -p 80:80 kennethreitz/httpbin
+docker pull gcr.io/dnastack-container-store/httpbin-${version}
+docker run -p 8080:8080 gcr.io/dnastack-container-store/httpbin-${version}
 ```
 
 See http://httpbin.org for more information.
